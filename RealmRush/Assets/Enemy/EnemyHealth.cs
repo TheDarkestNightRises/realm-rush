@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 [RequireComponent(typeof(Enemy))]
 public class EnemyHealth : MonoBehaviour
@@ -9,6 +10,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] int maxHitPoints = 5;
     [Tooltip("Adds amount to maxHitPoints when enemy die")]
     [SerializeField] int difficultyRamp = 1;
+
+
     int currentHitPoints = 0;
     Enemy enemy;
 
