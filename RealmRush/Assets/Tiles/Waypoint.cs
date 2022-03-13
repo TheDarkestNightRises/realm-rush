@@ -13,10 +13,9 @@ public class Waypoint : MonoBehaviour
     private void OnMouseDown()
     {
         if (isPlaceable)
-        {
-            Debug.Log(transform.name);
-            towerPrefab.CreateTower(towerPrefab, transform.position);
-            isPlaceable = false;
+        {   
+            bool isPlaced = towerPrefab.CreateTower(towerPrefab, transform.position);
+            isPlaceable = !isPlaced;
         }
     }
 }
